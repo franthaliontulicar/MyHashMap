@@ -8,7 +8,9 @@
 public class MyHashMap
 {
     // instance variables - replace the example below with your own
-    private int x;
+ private String clavePrin;
+ private int[] valorPri;
+ 
 
     /**
      * Constructor for objects of class MyHashMap
@@ -16,7 +18,8 @@ public class MyHashMap
     public MyHashMap()
     {
         // initialise instance variables
-        x = 0;
+        
+        valorPri = new int[0];
     }
 
     /**
@@ -25,9 +28,25 @@ public class MyHashMap
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public int put(String clave, int valor)
     {
-        // put your code here
-        return x + y;
+       int valorClave = -1;
+       if(clave.equals(clavePrin)){
+           valorClave = valorPri[valor];
+        }
+        return valorClave;
     }
+    
+    
+    public int get(String clave){
+        int valorClave = -1;
+        for(int i = 0; i <= valorPri.length; i++){
+            if(clave != null){
+                valorClave = valorPri[i];
+            }
+        }
+        return valorClave;
+    
+    }
+    
 }
