@@ -58,7 +58,7 @@ public class MyHashMap
         return vacio;
     }
     
-    public void size(){
+    public int size(){
     
         return valorPri.length;
     }
@@ -71,7 +71,7 @@ public class MyHashMap
     public boolean containsKey(String clave){
      boolean contenido = false;
         int indice = 0;
-        for (int index = 0; index < lista.length && !(contenido); index++){
+        for (int index = 0; index < valorPri.length && !(contenido); index++){
             if(clavePrin.equals(clave)){
                 contenido = true;
             }
