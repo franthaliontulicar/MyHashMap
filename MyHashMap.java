@@ -49,4 +49,48 @@ public class MyHashMap
     
     }
     
+    
+    public boolean isEmpty(){
+        boolean vacio = true;
+         if(valorPri.length == 0){
+            vacio = true;
+        }
+        return vacio;
+    }
+    
+    public void size(){
+    
+        return valorPri.length;
+    }
+    
+    public void clear(){
+        valorPri = new int[0];
+    
+    }
+    
+    public boolean containsKey(String clave){
+     boolean contenido = false;
+        int indice = 0;
+        for (int index = 0; index < lista.length && !(contenido); index++){
+            if(clavePrin.equals(clave)){
+                contenido = true;
+            }
+            indice++;        
+        }
+        return contenido;
+        
+    }
+    
+    public boolean containValue(int valor){
+     boolean contenido = false;
+        int indice = 0;
+        for (int index = 0; index < valorPri.length && !(contenido); index++){
+            if(valorPri[indice] == valor){
+                contenido = true;
+            }
+            indice++;        
+        }
+        return contenido;
+    }
+    
 }
